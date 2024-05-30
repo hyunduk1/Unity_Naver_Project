@@ -1,0 +1,3 @@
+1. This software uses code of FFmpeg licensed under the LGPLv2.1 and its source can be downloaded at https://github.com/DemolitionStudios/FFmpeg
+2. This software uses code of ENet-CSharp licensed under the MIT license and its source can be downloaded at https://github.com/nxrighthere/ENet-CSharp
+3. This software uses code of Graphy licensed under the MIT license and its source can be downloaded at https://github.com/Tayx94/graphy

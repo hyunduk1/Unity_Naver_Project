@@ -1,0 +1,61 @@
+Sockets Under Control
+
+V1.0:
+- First release
+
+V1.1:
+- BugFix: UDPConnection freezing at start on Apple platforms.
+- BugFix: Improved default IP addresses selection (Compatible with Linux on IPV6).
+- BugFix: Better detection of WSConnection closing unexpectedly (WSConnection and WSServer).
+- NewFeature: WebSocket Sharp is implemented in WSServer instead of the wrapper for core compatibility in Mono platforms.
+- NewFeature: WebGL plugin is implemented in WSConnection instead of the wrapper for core compatibility.
+- NewFeature: NTP_RealTime class (Sync devices in current time).
+- NewFeature: WinForms demo project includes NTP_RealTime tab.
+- NewFeature: WinForms demo project compatible with Linux (Monodevelop).
+- NewFeature: UnityWSServer doesn't requests url and service separately anymore (it uses one single prefix for coherence).
+
+V1.2
+- BugFix: Catching exception on NTP_RealTime when no network available.
+- BugFix: WSConnection automatically restores fragmented incoming messages.
+- BugFix: TCPConnection and WSConnection crash when disconnecting on server side, while running on slow devices.
+- BugFix: TCPConnection stops retry connection timer sometimes.
+- BugFix: WSConnection not stopping at "Aborted" state.
+- Improvement: Captured exception on incomming messages when the connection is already closed (atomic operation).
+- Improvement: Added small delay before firing onOpen event to allow the server to setup the incomming connection.
+- Improvement: TCPConnections are purged automatically in TCPServer (some times they don't close themselves).
+- Improvement: All onMessage errors fires the onError event too. This error is a user-code related, very useful for multi-thread debugging.
+- Improvement: Better fragmentation avoidance in TCPConnection.
+- Improvement: WSServer throuws an error when .net implementation is used in Mono runtime.
+- New feature: FileManagement now is included (The FM_IniFile class was improved to be used in communications).
+- New feature: Added new class+wrapper to control serial RS232 ports.
+
+V1.3
+- BugFix: UDPConnection discarding local messaged from different sources with same IP.
+- BugFix: Android don't manages well Thread disposing on retrying TCP connections.
+- BugFix: Increased stability of TCPConnection and WSconnection against connection loss and recovery.
+- BugFix: WebSocketSharp returning null exceptions in some networks (Generic error 999).
+- BugFix: WebSocketSharp unable to list available IP addresses correctly in OSX Big Sur.
+- Improvement: Better error control on multi-threaded events.
+- Improvement: Connection lost errors are filtered as normal disconnection events.
+- Improvement: Servers locks threads while connecting and disconnecting.
+- Improvement: The event of connection timed-out (retry connection) not firing onClose any more.
+- Improvement: Better recovery on TCPServer and WSServer under VPN.
+- Improvement: Protection for servers against sudden client disconnections while performing tasks on incoming connections.
+- New feature: NTP server emulation under UDP, TCP and WebSocket, for speed and isolated networks.
+- New feature: TCPConnection optionally supports automatic streamed input (providing an ending char/byte).
+- New feature: NTP client returns the last synchronized time always, even when further synchronization fails (more reliable).
+
+V1.4
+- Bug fix: Consistency error with unexpected TCP disconnections (client & server).
+- Bug fix: WSConnection instancing not working properly on WebGL (when multiple connections at once are used).
+- Bug fix: The "keepAlive" parameter wasn't visible in UDPConnection wrapper.
+- Bug fix: NTP synchronization not working in WebGL (WebSocket only).
+- Improvement: TCPConnection uses a byte[] (or string) as _eof.
+- Improvement: Keepalive timer and message also implemented on TCPConnection.
+- Improvement: TCPConnection adds _eof sequence automatically if not included in the provided message to SendData().
+- Improvement: Incoming messages are dispached on Update() to accelerate execution on all wrappers (FixedUpdate can be significantly slower).
+- New feature: WServer was completelly replaced by a new version 5 times faster and more reliable (WebSocketSharp demonstrated to be too slow and unreliable).
+- New feature: VS example project works as stress-test target for both servers (fastest approach).
+- New feature: The "keepAlive" timer also serves as a connection failure detection against any possible failure (please check documentation).
+- New feature: All 4 events runs in a safe way to prevent app crashes (for external code error) and fires onError in order to ease debugging.
+- New feature: NTP_RealTime implements "onSync" and "onError" events.

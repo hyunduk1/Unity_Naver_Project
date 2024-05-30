@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 3f4a3db3ff73d89408aa0215cfe47ed7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _ftsPanel: {fileID: 115894, guid: 2f743e5ba837b10498582d5a09e2f274, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 850a6f95248a90c4da2eb027f94dd7c6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - popupFtsPrefab: {fileID: 103780, guid: 3c72f2e6bc2dc9d4d8d27dd4b56cdb57, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,91 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public enum PC_ID
+{
+    PC_CONTROL_CENTER = 0,
+    PC_NAMU_CONDITIONING = 1,
+    PC_LAUNG_TABLE_CONTENTS = 2,
+    PC_ROBOT = 3,
+    PC_DEFAULT = 4
+}
+
+
+
+public enum CONTENTS_ID
+{
+    PC_CONTROL_CENTER = 1001,
+    PC_NAMU_CONDITIONING = 1002,
+    PC_LAUNG_TABLE_CONTENTS = 1003,
+    PC_ROBOT = 1004,
+    PC_DEFAULT = 1005
+}
+public enum PROTOCOL
+{
+    /// <summary>
+    /// MAIN PAGE , SETTING PAGE
+    /// </summary>
+    MSG_SETTING_POPUP = 99,    //{“id”:99}
+    MSG_TOUR_START = 100,   //{“id”:100}
+
+    //안씀
+    MSG_LANGUAGE_ENGLISH = 101,   //{“id”:101}
+    MSG_LANGUAGE_TOGGLE_EN_KR = 102,   //{“id”:102,”value”:1 } -> KR
+                                       //{“id”:102,”value”:2 } -> EN
+
+
+    MSG_LANGUAGE_ENGLISH_CONTROL = 151,   //{“id”:151,}-> EN
+    MSG_LANGUAGE_TOGGLE_EN_KR_CONTROL = 152,   //{“id”:152}-> EN
+
+    /// <summary>
+    /// SETTING PAGE
+    /// </summary>
+    MSG_SETTING_CLOSE = 200,//{“id”:200}
+    MSG_CONTROLL_CENTER_SYSTEM_REBOOT = 201,//{“id”:201}
+    MSG_CONTROLL_CENTER_PROGRAM_RESTART = 202,//{“id”:202}
+    MSG_NAMU_SYSTEM_REBOOT = 203,//{“id”:203}
+    MSG_NAMU_PROGRAM_RESTART = 204,//{“id”:204}
+    MSG_LAUNGE_TABLE_REBOOT = 205,//{“id”:205}
+    MSG_LAUNGE_TABLE_RESTART = 206,//{“id”:206}
+    MSG_ROBOT_REBOOT = 207,//{“id”:207}
+    MSG_ROBOT_RESTART = 208,//{“id”:208}
+    MSG_HOME = 209,//{“id”:209}
+
+
+
+    /// <summary>
+    /// LAUNG TABLE PAGE
+    /// </summary>
+    MSG_LAUNG_TABLE_AUTO_START = 500,
+    MSG_LAUNG_TABLE_MANUAL_START = 501,
+
+    MSG_LAUNG_DATA_CENTER_SELECT = 502,
+    MSG_LAUNG_DATA_CENTER_SITE = 503,
+    MSG_LAUNG_SOUTH_NORTH_SITE = 504,
+    MSG_LAUNG_GROUND_STABILITY = 505,
+
+    MSG_LAUNG_SELSMIC_DESIGN = 506,
+    MSG_LAUNG_FIRE_FIGHTING = 507,
+    MSG_LAUNG_ELECTRICITY_SUPPLY = 508,
+    MSG_LAUNG_WIND_DIRECTION = 509,
+
+    MSG_LAUNG_WASTE_HEAT_UTIILZATION = 510,
+    MSG_LAUNG_COOLING_TOWER = 511,
+    MSG_LAUNG_SOLAR_GEOTHERMAL_HEAT = 512,
+    MSG_LAUNG_RENEWABLE_ENERGY = 513,
+    MSG_LAUNG_RAINWATER_HEAVYWATER = 514,
+    MSG_LAUNG_LEED = 515,
+    MSG_LAUNG_OUTRO = 516,
+
+    MSG_LAUNG_EXIT = 517,
+    MSG_LAUNG_PLAY_STOP = 518, //  {“id”:518,"value":0}  <-stop   // {“id”:418,"value":1}  <--PLAY
+    MSG_LAUNG_NEXT_PAGE = 519,
+
+
+    MSG_LOUNGE_PC_ID = 2,
+
+    MSG_SET_PC_ID = 1000, // {“id”:1000,”value”:0 }
+    MSG_SET_LAUNG_STATE = 702,
+    MSG_LAUNGE_AUTO_FINISH = 4002
+}
+
